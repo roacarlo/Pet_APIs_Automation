@@ -27,7 +27,7 @@ jobs:
           
       - name: Run test
         run: >-
-          newman run "PostmanCollections/Pet_API.json" -e "PostmanCollections/petStore_Environment.json" -r cli,htmlextra
+          newman run "postman/collections/Pet_API.json" -e "postman/collections/petStore_Environment.json" -r cli,htmlextra
           --reporter-htmlextra-export testArtifacts/htmlreport.html
           
       - name: Output the results
