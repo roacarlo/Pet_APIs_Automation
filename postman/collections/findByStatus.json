@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "125ab02f-1aa3-48c8-baea-23ddc2fd89bf",
+		"name": "findByStatus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "17046425-125ab02f-1aa3-48c8-baea-23ddc2fd89bf"
+	},
+	"item": [
+		{
+			"name": "findByStatus_sold",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bae56f1f-78f4-46f0-89f2-86ae94b3fdcc",
+						"exec": [
+							"pm.test(\"Consultar por estado - Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Consultar por estado - Estructura Json Response\", ()=> {\r",
+							"   const body = pm.response.json();\r",
+							"   for (let i=0; i<body.length; i++){\r",
+							"        pm.expect(body[i]).to.have.property(\"id\");\r",
+							"        //pm.expect(body[i].category).to.have.property(\"id\");\r",
+							"        \r",
+							"   }\r",
+							"});\r",
+							"pm.test(\"Consultar por estado - Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "fa692530-78ff-4513-a8f9-16128df2dfb6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/findByStatus?status=sold",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "sold"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
