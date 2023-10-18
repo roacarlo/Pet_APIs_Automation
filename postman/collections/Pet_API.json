@@ -25,6 +25,9 @@
 							"        //pm.expect(body[i].category).to.have.property(\"id\");\r",
 							"        \r",
 							"   }\r",
+							"});\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
 							"});"
 						],
 						"type": "text/javascript"
