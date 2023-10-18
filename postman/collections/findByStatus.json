@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "f1c12ec7-9043-42bc-a4c4-cf831b2e44bd",
+		"name": "findByStatus",
+		"description": "findByStatus_sold",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "17046425-f1c12ec7-9043-42bc-a4c4-cf831b2e44bd"
+	},
+	"item": [
+		{
+			"name": "findByStatus_sold",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2df2ff02-f621-4bde-917b-7e212f6c7978",
+						"exec": [
+							"pm.test(\"Consultar por estado - Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Consultar por estado - Estructura Json Response\", ()=> {\r",
+							"   const body = pm.response.json();\r",
+							"   for (let i=0; i<body.length; i++){\r",
+							"        pm.expect(body[i]).to.have.property(\"id\");\r",
+							"        //pm.expect(body[i].category).to.have.property(\"id\");\r",
+							"        \r",
+							"   }\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "133924c6-e28f-4298-bf17-f3c96d1085e1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/findByStatus?status=sold",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "sold"
+						}
+					]
+				},
+				"description": "Desc"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "28e71d6b-8aa7-4329-8faf-75cfd29502a2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "db33a206-0073-4b8b-82e2-c73ce52e81b7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
