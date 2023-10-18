@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "125ab02f-1aa3-48c8-baea-23ddc2fd89bf",
+		"_postman_id": "4fda3f6e-5e9e-450a-8a7e-92c1810b7679",
 		"name": "findByStatus",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "17046425-125ab02f-1aa3-48c8-baea-23ddc2fd89bf"
+		"_uid": "17046425-4fda3f6e-5e9e-450a-8a7e-92c1810b7679"
 	},
 	"item": [
 		{
@@ -12,7 +12,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "bae56f1f-78f4-46f0-89f2-86ae94b3fdcc",
+						"id": "b5ab111e-46c7-4ef3-a7d4-b8eeb8f90612",
 						"exec": [
 							"pm.test(\"Consultar por estado - Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -22,8 +22,7 @@
 							"   const body = pm.response.json();\r",
 							"   for (let i=0; i<body.length; i++){\r",
 							"        pm.expect(body[i]).to.have.property(\"id\");\r",
-							"        //pm.expect(body[i].category).to.have.property(\"id\");\r",
-							"        \r",
+							"        //pm.expect(body[i].category).to.have.property(\"id\");        \r",
 							"   }\r",
 							"});"
 						],
@@ -31,7 +30,7 @@
 					}
 				}
 			],
-			"id": "fa692530-78ff-4513-a8f9-16128df2dfb6",
+			"id": "98daf352-6e51-458f-92bf-a630f8459759",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
