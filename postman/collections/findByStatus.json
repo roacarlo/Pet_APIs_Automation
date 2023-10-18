@@ -25,9 +25,6 @@
 							"        //pm.expect(body[i].category).to.have.property(\"id\");\r",
 							"        \r",
 							"   }\r",
-							"});\r",
-							"pm.test(\"Consultar por estado - Status code is 500\", function () {\r",
-							"    pm.response.to.have.status(500);\r",
 							"});"
 						],
 						"type": "text/javascript"
