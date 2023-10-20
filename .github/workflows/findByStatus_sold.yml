@@ -7,7 +7,7 @@ name: findByStatus_sold
     branches:
       - master
 jobs:
-  test-api:
+  test-api_PetStore:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
