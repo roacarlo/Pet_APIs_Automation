@@ -26,8 +26,7 @@ jobs:
           
       - name: Run test
         run: >-
-          newman run "postman/collections/findByStatus.json" -e "postman/collections/petStore_Environment.json"
-          --reporter-htmlextra-export testArtifacts/htmlreport.html
+          newman run "postman/collections/findByStatus.json" -e "postman/collections/petStore_Environment.json" --reporter-htmlextra-export testArtifacts/htmlreport.html
           
       - name: Output the results
         uses: actions/upload-artifact@v3
